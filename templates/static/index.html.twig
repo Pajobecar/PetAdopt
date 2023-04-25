@@ -1,0 +1,101 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pet Adopt{% endblock %}
+{% block stylesheets %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<link rel="stylesheet" href="{{ asset("css/static.css") }}">
+<link rel="stylesheet" href="{{ asset("navbarFooterCss/navfoot.css") }}">
+{% endblock %}
+
+
+{% block body %}
+<body>
+    
+
+    
+
+<h1 class="text-center fs-1 my-5" id="abouttexttitle">Pet of the Week</h1>
+
+
+{# -------------- #}
+{# <div class="swiper mySwiper w-75 photos-combi"> #}
+    {# <div class="swiper-wrapper"> #}
+        {# {% for pet in allpets %}
+        <div class="swiper-slide"><img src="{{ asset("uploads/" ~ pet.image) }}" class="imgimg mb-5" alt="Random Image">
+            <figcaption class="fig"><h1>{{pet.name}}</h1></figcaption>
+            <h2 class="figg"><i class="fa-solid fa-location-crosshairs"></i>{{pet.location}}</h2>
+        </div>
+        {% endfor %} #}
+
+        {# {% for pet in randomPets %}
+        <div class="swiper-slide"><img src="{{ asset("uploads/" ~ pet.image) }}" class="imgimg mb-5" alt="Random Image">
+            <figcaption class="fig"><h1>{{pet.name}}</h1></figcaption>
+            <h2 class="figg"><i class="fa-solid fa-location-crosshairs"></i>{{pet.location}}</h2>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div> #}
+  {# </div> #}
+  {# ------------------ #}
+
+
+  {# ---------------TIME CAROUSEL-------------- #}
+  <div class="swiper mySwiper w-75 photos-combi">
+    <div class="swiper-wrapper">
+      {% for pet in randomPets %}
+        <div class="swiper-slide"><img src="{{ asset("uploads/" ~ pet.image) }}" class="imgimg mb-5" alt="Random Image">
+            <figcaption class="fig"><h1>{{pet.name}}</h1></figcaption>
+            <h2 class="figg"><i class="fa-sharp fa-solid fa-map-location-dot mx-2"></i>{{pet.location}}</h2>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+    <div class="autoplay-progress">
+      <svg viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="20"></circle>
+      </svg>
+      <span></span>
+    </div>
+  </div>
+  {# ----------------TIME CAROUSEL------------------ #}
+
+  {# <img src="{{ asset(image) }}" alt="{{ animal }}">
+  <h1>{{ animal }}</h1> #}
+
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+   <script>
+    const progressCircle = document.querySelector(".autoplay-progress svg");
+    const progressContent = document.querySelector(".autoplay-progress span");
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 50,
+      centeredSlides: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      on: {
+        autoplayTimeLeft(s, time, progress) {
+          progressCircle.style.setProperty("--progress", 1 - progress);
+          progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+        }
+      }
+    });
+  </script>  
+
+
+</body>
+{% endblock %}

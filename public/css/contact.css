@@ -1,0 +1,35 @@
+body {
+    background-color: #395B64;
+}
+#contact{
+    margin-top: 100px !important;
+}
+ #maps:hover{
+    width: 610px;
+    height: 460px;
+    transition: all 0.5s; 
+}
+#maps {
+    width: 100%;
+}
+#abouttexttitle {
+    text-shadow: 2px 4px white;
+    font-size: 5em;
+}
+.abouttext {
+     color: #000000; 
+     color: #fff;
+    font-family: 'Staatliches', cursive;
+}
+input::placeholder{
+    color: white !important;
+}
+textarea::placeholder{
+    color: white !important;    
+}
+input:hover{
+    box-shadow: 0px 10px 20px white !important;
+}
+textarea:hover{
+    box-shadow: 0px 10px 20px white !important;
+}

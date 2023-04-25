@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset("aboutcss/aboutcss.css") }}">
+<script src="https://kit.fontawesome.com/c8cde29953.js" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block body %}
+<div class="container text-center d-flex flex-column" style="margin-top: 100px;"></div>
+    
+    <div class='col-lg-12 col-md-12 d-flex justify-content-center'>
+
+        <div class='container fluid row gap-3 text-center form text' style="margin-bottom: 100px;">
+            <h1 class="abouttexttitle animate__animated animate__fadeInLeft">About Us</h1><br><br>
+            <div class="container animate__animated animate__zoomIn">
+                <h3 class="abouttext">Welcome to our animal adoption site! We are a team of passionate animal lovers dedicated to helping animals in need find their forever homes.</h3>
+
+                    <h3 class="abouttext">Our mission is to rescue, rehabilitate, and rehome animals of all kinds. We believe that every animal deserves a loving and caring home, and we work tirelessly to ensure that they find one.</h3>
+                    <h3 class="abouttext">Our site features a wide range of animals available for adoption, from dogs and cats to rabbits, guinea pigs, and more. Each animal has a unique story and personality, and we strive to match them with loving families that will provide them with the care and attention they deserve.</h3>
+
+                    <h3 class="abouttext">We understand that adopting a pet is a big decision, and we are here to support you every step of the way. Our adoption process is designed to ensure that both you and the animal are a good match, and we will work with you to make sure that the transition to your new pet's home is as smooth as possible.</h3>
+                    <h3 class="abouttext">In addition to adoptions, we also offer a range of services to support pet owners, including training, education, and resources to help you provide the best possible care for your new furry friend.</h3>
+
+                    <h3 class="abouttext">Thank you for considering adoption and for supporting our mission to give animals a second chance at life. Together, we can make a difference in the lives of animals in need.</h3>
+            </div>
+            <hr>
+            <h1 class="abouttexttitle  mx-auto animate__animated animate__fadeInLeft">Our Team</h1><br><br>
+            <div class='container-fluid animate__animated animate__zoomIn'>
+
+            <div class="row">
+            
+            <div class='col-lg-12'>
+            
+            <div class='container container-fluid row row-cols-md-1 row-cols-lg-4 mediacards mx-auto text-center gap-3 w-100  display-flex justify-content-center'>
+
+                
+
+                <div class="card aboutcard glow1 glow1-glow " style="!importaint height: 600px; width:400px;">
+                    <br>
+                    <div class="container"><img src="{{ asset("navbarPhoto/logo.jpg") }}" class="rounded-circle" width="150"></div>
+                    <h3 class="abouttext">Mr. Aleksandar Pinteric</h3>
+                    <hr>
+                    <br>
+                    <h1 class="abouttext fs-1">CEO</h1>
+                    <hr>
+                    <h2 class="abouttext">Contact:</h2>
+                    <h4 class="abouttext">E-Mail: alexyflexy@gmail.com</h4>
+                    <h4 class="abouttext">Phone: +43 6677746851</h4>
+                    <i class="fa-solid fa-paw zoom12 fs-1"></i>
+                </div>
+
+                <div class="card aboutcard glow1 glow1-glow" style="height: 600px; width: 400px !important">
+                    <br>
+                    <div class="container"><img src="{{ asset("navbarPhoto/logo.jpg") }}" class="rounded-circle" width="150"></div>
+                    <h3 class="abouttext">Mr. Arnaldo Arnaldovic</h3>
+                    <hr>
+                    <br>
+                    <h1 class="abouttext fs-1">Photographer & post production</h1>
+                    <hr>
+                    <h2 class="abouttext">Contact:</h2>
+                    <h4 class="abouttext">E-Mail: ronaldinho90@hotmail.com</h4>
+                    <h4 class="abouttext">Phone: +43 6674685111</h4>
+                    <i class="fa-solid fa-paw zoom12 fs-1"></i>
+                </div>
+
+                <div class="card aboutcard glow1 glow1-glow" style="height: 600px; width: 400px !important">
+                    <br>
+                    <div class="container"><img src="{{ asset("navbarPhoto/logo.jpg") }}" class="rounded-circle" width="150"></div>
+                    <h3 class="abouttext">Mr. Viktor Beckes</h3>
+                    <hr>
+                    <br>
+                    <h1 class="abouttext fs-1">Marketing</h1>
+                    <hr>
+                    <h2 class="abouttext">Contact:</h2>
+                    <h4 class="abouttext">E-Mail: viennacash@hotmail.com</h4>
+                    <h4 class="abouttext">Phone: +43 6573431809</h4>
+                    <i class="fa-solid fa-paw zoom12 fs-1"></i>
+                </div>
+            </div>
+            </div>    
+            </div>
+
+         
+
+
+
+        </div>    
+    </div>        
+</div>         
+{% endblock %}

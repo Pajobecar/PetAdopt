@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %} 
+
+{% block title %}Hello PetLover!{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset("arnaldocss/css.css") }}"> 
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+{% endblock %}
+
+
+ {% block body %}
+<div>
+    <h1 class="text-center animate__animated animate__fadeInLeft" id="petshop">Petshop List</h1>
+
+<div class="container">
+        <div class="row">
+    {% for pet in pets %}
+
+    
+            <div class="col-lg-4 col-xlg-3 col-md-6 col-sm-12 mb-4">
+                <div class="card animate__animated animate__zoomIn">
+                    <div class="card-body">
+                        <center class="m-t-30"> <img src="{{asset("uploads/" ~ pet.image)}}" class="img-circle" width="150" height="100">
+                            <h4 class="card-title m-t-10">{{ pet.name }}</h4>
+                            <h6 class="card-subtitle">{{ pet.species }}</h6><br>
+                            <p class="card-text">{{ pet.description }}</p>
+                            <div class="row text-center justify-content-md-center">
+                                <div class="col-4"><i class="fa fa-cake-candles"></i>
+                                    <font class="font-medium">{{ pet.age }}</font>
+                                    </a>
+                                </div>
+                                <div class="col-4"><i class="fa fa-paw"></i>
+                                    <font class="font-medium">{{ pet.status }}</font>
+                                    </a>
+                                </div>
+                            </div>
+                        </center>
+                    </div>
+                    <div>
+                        <hr> </div>
+                    <div class="card-body"> <small class="text-muted">Adoption Requirements </small>
+                        <h6>{{ pet.needs }}</h6> <small class="text-muted p-t-30 db">Breed</small>
+                        <h6>{{ pet.breed }}</h6> <small class="text-muted p-t-30 db">Address</small>
+                        <h6>
+                            <td>{{ pet.location }}</td>
+                        </h6>
+                        <div class="map-box">
+                            {# <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d470029.1604841957!2d72.29955005258641!3d23.019996818380896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C+Gujarat!5e0!3m2!1sen!2sin!4v1493204785508"
+                                width="100%" height="150" frameborder="0" style="border:0" allowfullscreen=""></iframe> #}
+                        </div> <small class="text-muted p-t-30 db">Options</small>
+                        <br>
+                        <button class="noselect mt-2" ><a class="nolink" href="{{ path('app_pet_show', {'id': pet.id}) }}">Details</a></button>
+                        {% if pet.likedBy.contains(app.user) %}
+                         <button class="likeselect mt-2 " ><a class="nolink" href="{{ path('app_unlike', {'id': pet.id}) }}">Unlike<i class="fa-solid fa-thumbs-down"></i><span class="ps-1 pe-1 rounded bg-dark text-white text-end">{{pet.likedby.count}}</span></a></button>
+                        {% else %}
+                            
+                         <button class="likeselect mt-2" ><a class="nolink text-center" href="{{ path('app_like', {'id': pet.id}) }}">Like<i class="fa-solid fa-thumbs-up "></i><span class="ps-1 pe-1 rounded bg-primary text-center bg-dark text-white">{{pet.likedby.count}}</span></a></button>
+                        {% endif %}
+                        
+                       
+                    </div>
+                </div>
+            
+    </div>
+ {% endfor %}
+
+</div>
+</div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            cssMode: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            mousewheel: true,
+            keyboard: true,
+        });
+    </script>
+<hr> {% endblock %}

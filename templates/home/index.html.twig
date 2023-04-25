@@ -1,0 +1,240 @@
+{% extends 'base.html.twig' %} {% block title %}Welcome Pawlover!{% endblock %} {% block stylesheets %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<link rel="stylesheet" href="{{ asset("css/static.css") }}">
+<link rel="stylesheet" href="{{ asset("homecss/home.css") }}"> {% endblock %} {% block body %} {# -------------- #}
+<div class="swiper mySwiper w-75 photos-combi">
+    <div class="swiper-wrapper">
+        {% for pet in randomPets %}
+        <div class="swiper-slide"><img src="{{ asset("uploads/" ~ pet.image) }}" class="imgimg mb-5" alt="Random Image">
+            <figcaption class="fig">
+                <h1>{{pet.name}}</h1>
+            </figcaption>
+            <h2 class="figg"><i class="fa-sharp fa-solid fa-map-location-dot mx-2"></i>{{pet.location}}</h2>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+    <div class="autoplay-progress">
+        <svg viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="20"></circle>
+        </svg>
+        <span></span>
+    </div>
+</div>
+
+<h1 class="text-center" id="home">Welcome to Pawfection</h1>
+
+<section class="section-big main-color">
+    <div class="container rounded" id="back">
+        <div class="row">
+            <div class="col-md-12 pb-20 text-center">
+                <h2 class="section-title mb-10"><span> Find <strong class="primary-color">your</strong> new best friend
+                    </span></h2>
+                <p class="section-sub-title">
+                    We are a passionate pet adoption agency that specializes to convey <br> animals from different shelters all over the world. Every animal (except fishes) is chipped and vaccinated.
+                </p>
+                <div class="exp-separator center-separator">
+                    <div class="exp-separator-inner">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <ul class="i-list medium">
+                    <li class="i-list-item">
+                        <div class="icon"> <i class="fa fa-dog"></i></div>
+
+                        <div class="icon-content">
+                            <h3 class="title">Dogs</h3>
+                            <p class="sub-title">
+                                At Pawfection you will be able to find the perfect everyday 4-legged-buddy which will fit to you and your family. We have puppies, teenagers and oldies.
+                            </p>
+                        </div>
+                        <div class="iconlist-timeline"></div>
+                    </li>
+                    <li class="i-list-item">
+                        <div class="icon"> <i class="fa-sharp fa-solid fa-fish"></i> </div>
+
+                        <div class="icon-content">
+                            <h3 class="title">Fishes</h3>
+                            <p>
+                                Even though you may not be able to stroke a fish, an aquarium with fishes inside can be very calming. Especially kids are very fascinating about that. Another positive point: you (hopefully) won't get an allergy.
+                            </p>
+                        </div>
+                    </li>
+            </div>
+            <div class="col-md-4">
+                <ul class="i-list medium">
+                    <li class="i-list-item">
+                        <div class="icon"> <i class="fa fa-cat"></i> </div>
+                        <div class="icon-content">
+                            <h3 class="title">Cats</h3>
+                            <p class="sub-title">
+                                Security, comfort and a lot of love will be some of the your cat's most basic needs. Give a fluffy friend a new home and you will get the love of your life right back.
+                            </p>
+                        </div>
+                        <div class="iconlist-timeline"></div>
+                    </li>
+                    <li class="i-list-item">
+                        <div class="icon"> <i class="fa-solid fa-paw"></i> </div>
+                        <div class="icon-content">
+                            <h3 class="title">Other Pets</h3>
+                            <p>
+                                If you have a taste in different animals, such as snakes, rats, tarantulas, etc. at pawfection you are at the right address.
+                            </p>
+                        </div>
+                    </li>
+            </div>
+            <div class="col-md-4">
+                <ul class="i-list medium">
+                    <li class="i-list-item">
+                        <div class="icon"> <i class="fa fa-dove"></i> </div>
+                        <div class="icon-content">
+                            <h3 class="title">Birds</h3>
+                            <p class="sub-title">
+                                Also birds can lose their old home unexpectedly. At Pawfection we support them during this hard time and also convey them to a new adoption place, where they get the love they deserve.
+                            </p>
+                        </div>
+                        <div class="iconlist-timeline"></div>
+                    </li>
+                    <li class="i-list-item">
+                        <div class="icon"> <i class="fa-solid fa-headset"></i> </div>
+                        <div class="icon-content">
+                            <h3 class="title">Any questions about our paws?</h3>
+                            <p>
+                                If you have questions about our animals or need an advice to make the right pet decision, please klick <a href="/contact">here</a> to contact us.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+
+<h2 class="text-center" id="adopt">Ready to adopt a Pet</h2>
+
+<div class="container bootstrap snippets bootdeys">
+    <div class="row">
+        <div class="col-md-4 col-sm-6 content-card">
+            <div class="card-big-shadow">
+                <div class="card card-just-text" data-background="color" data-color="blue" data-radius="none">
+                    <div class="content">
+                        <h6 class="category">Make a checklist</h6>
+                        {#
+                        <h4 class="title"><a href="#">Blue Card</a></h4> #}
+                        <p class="description">Before you give an animal a new home and a family, you should check if everything necessary is already prepared. We also highly recommened you to search for a vet next to your address for the examination appointments and for in
+                            case of emergency.
+                        </p>
+                    </div>
+                </div>
+                <!-- end card -->
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 content-card">
+            <div class="card-big-shadow">
+                <div class="card card-just-text" data-background="color" data-color="green" data-radius="none">
+                    <div class="content">
+                        <h6 class="category">Appointment with a trainer</h6>
+                        {#
+                        <h4 class="title"><a href="#">Green Card</a></h4> #}
+                        <p class="description">Especially if you want to adopt a dog, you should meet your new buddy at least once before you take him home. One of our professional trainer will then take you and your (almost) new family member for a walk and show you everything
+                            you need to know about the paw. </p>
+                    </div>
+                </div>
+                <!-- end card -->
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 content-card">
+            <div class="card-big-shadow">
+                <div class="card card-just-text" data-background="color" data-color="yellow" data-radius="none">
+                    <div class="content">
+                        <h6 class="category">Train your Pet</h6>
+                        {#
+                        <h4 class="title"><a href="#">Yellow Card</a></h4> #}
+                        <p class="description">If your happy home is going to remain a happy home, the housetraining will need to start immediately after bringing your pet home. For example if you are adopting a kitten, introduce him to his litterbox as soon as you get him
+                            inside.
+                        </p>
+                    </div>
+                </div>
+                <!-- end card -->
+            </div>
+        </div>
+        <br>
+        <div class="container mb-4">
+            <div class="mgb-40 padb-30 auto-invert line-b-4 align-center">
+                <h2 class="text-center" id="review">Pawfect Review</h2>
+            </div>
+            <div class="container">
+                <ul class="hash-list cols-3 cols-1-xs pad-30-all align-center text-sm">
+                    <li>
+                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" class="wpx-100 img-round mgb-20" title="" alt="" data-edit="false" data-editor="field" data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]">
+                        <p class="fs-110 font-cond-l" contenteditable="false">"I recently adopted a pet from Pawfect Adoption service and I couldn't be happier. The whole process was smooth and stress-free and the staff were so helpful and knowledgeable. They took the time to understand my needs, lifestyle
+                            and budget before suggesting a suitable pet for me. My new furry friend is already settling in, thanks to their amazing efforts! Pawfection is definitely the best option if you're looking to add a four-legged family member!"</p>
+                        <h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Mary Smith</h5>
+                        <small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Business Woman -
+                            New York</small>
+                    </li>
+                    <li>
+                        <img src="https://bootdey.com/img/Content/avatar/avatar4.png" class="wpx-100 img-round mgb-20" title="" alt="" data-edit="false" data-editor="field" data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]">
+                        <p class="fs-110 font-cond-l" contenteditable="false">"Many years ago I adopted a pet from Pawfect Adoption agency and it was one of the best decisions I ever made! The whole process was incredibly easy, the people were incredibly friendly and knowledgeable, and the animal I got was
+                            just perfect. I felt like they really understood my situation and my needs, so they matched me with the perfect pet. Highly recommend for anyone looking for an amazing new companion!"</p>
+                        <h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">John Doe</h5>
+                        <small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Recording Artist
+                            - Los Angeles</small>
+                        <br>
+                        <br>
+                    </li>
+                    <li>
+                        <img src="https://bootdey.com/img/Content/avatar/avatar5.png" class="wpx-100 img-round mgb-20" title="" alt="" data-edit="false" data-editor="field" data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]">
+                        <p class="fs-110 font-cond-l" contenteditable="false">"I decided to adopt a pet through Pawfect Adoption and since that day it has been an amazing experience for me and my family. The staff was incredibly helpful, knowledgeable and kind throughout the entire process. They were patient
+                            with all my questions and made sure that I felt comfortable with the decision to adopt. The process was transparent and efficient, so I knew exactly what to expect from start to finish. I recommend them highly!"
+                        </p>
+                        <h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Sean Carter</h5>
+                        <small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Fund Manager -
+                            Chicago</small>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+    const progressCircle = document.querySelector(".autoplay-progress svg");
+    const progressContent = document.querySelector(".autoplay-progress span");
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 50,
+        centeredSlides: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        },
+        on: {
+            autoplayTimeLeft(s, time, progress) {
+                progressCircle.style.setProperty("--progress", 1 - progress);
+                progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+            }
+        }
+    });
+</script>
+
+{% endblock %}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Pawfect Match Adoptions!{% endblock %}</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>PA</text></svg>">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        
+        <link rel="stylesheet" href="{{ asset("navbarFooterCss/navfoot.css") }}"> <!--css file for footer and navbar-->
+        <link
+        rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> <!--animation link-->
+        
+
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+      
+    </head>
+    <body>
+          {% block navbar %}
+          {% if app.user %}
+            <nav class="navbar nfbg  fluid h-75">
+
+              <div class="container-fluid display-flex justify-content-center">
+
+                <div style="width: 0px;"></div>
+              <div><a class="nav-link navlogotext nfbutton" aria-current="page" href="/home">
+                <img src="{{ asset("navbarPhoto/pawfect.png") }}" class="rounded-circle" width="70vh" style="height:8vh;">
+                Pawfect Adoption
+              </a></div>
+
+              <div style="width: 50px;"></div>
+              <div><a class="nav-link active nftext fs-3 navzoom" aria-current="page" href="/about">About Us</a></div>
+              <div style="width: 50px;"></div>
+              <div><a class="nav-link active nftext fs-3 navzoom" aria-current="page" href="/contact">Contact</a></div>
+              <div style="width: 50px;"></div>
+              <div><a class="nav-link active nftext fs-3 navzoom" aria-current="page" href="/user/">Animals</a></div>
+              <div style="width: 50px;"></div>
+              <div class="nav-item dropdown">
+                 
+                <a class="nav-link dropdown-toggle nav-link navnametext fs-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="{{asset('uploads/' ~ app.user.image)}}" class="rounded-circle" width="50" height="50">
+                  {{ app.user.fname  }} {{ app.user.lname  }}
+                </a>
+                <ul class="dropdown-menu bg-dark w-100">
+                  <li><a class="dropdown-item nftext fs-2" href="/profile/">My Profile</a></li>
+                  <li><a class="dropdown-item nftext fs-2 border" href="{{ path('app_logout') }}">logout</a></li>
+                </ul>
+      
+              </div>
+              
+             
+
+
+
+              
+               <div>
+                 {# <form class="d-flex" role="search"> #}
+                 {# <input class="form-control me-2 bg-dark w-75 nftext" type="search" placeholder="Search" aria-label="Search"> #}
+                 {# <button class="btn btn-secondary nftext fs-3 navbutton glow-navbutton" type="submit">Search</button> #}
+                 {# </form> #}
+               </div>
+               <div style="width: 50px;"></div>
+               
+               
+           
+           {% else %}
+       
+           <nav class="navbar nfbg  fluid h-75">
+
+            <div class="container-fluid display-flex justify-content-center">
+
+              <div style="width: 0px;"></div>
+            <div><a class="nav-link navlogotext nfbutton" aria-current="page" href="/">
+              <img src="{{ asset("navbarPhoto/pawfect.png") }}" class="rounded-circle" width="70vh" style="height:8vh;">
+              Pawfect Adoption
+            </a></div>
+
+            <div style="width: 50px;"></div>
+            <div><a class="nav-link active nftext fs-3 navzoom" aria-current="page" href="/about">About Us</a></div>
+            <div style="width: 50px;"></div>
+            <div><a class="nav-link active nftext fs-3 navzoom" aria-current="page" href="/contact">Contact</a></div>
+            <div style="width: 50px;"></div>
+            <div style="width: 50px;"></div>
+            <div class="nav-item dropdown">
+               
+         
+    
+            </div>
+            
+           
+
+
+
+            
+             <div>
+               {# <form class="d-flex" role="search"> #}
+               {# <input class="form-control me-2 bg-dark w-75 nftext" type="search" placeholder="Search" aria-label="Search"> #}
+               {# <button class="btn btn-secondary nftext fs-3 navbutton glow-navbutton" type="submit">Search</button> #}
+               {# </form> #}
+             </div>
+             <div style="width: 50px;"></div>
+           
+               
+             <form class="d-flex" role="search">
+             <a href="{{ path('app_login') }}" class="btn btn-secondary nftext fs-3 navbutton glow-navbutton" type="submit">Login</a>/
+             <a href="{{ path('app_register') }}" class="btn btn-secondary nftext fs-3 navbutton glow-navbutton" type="submit">Register</a>
+             </form>
+           </div>
+           {% endif %}
+            
+            <div style="width: 0px;"></div>
+              </div>
+              
+
+            </nav>
+            
+
+
+
+            
+          {% endblock %}
+
+          <a href="#" class="btn btn-white text-dark bg-light back-to-top d-flex align-items-center justify-content-center p-3"><i class="fa-solid fa-arrow-up"></i></a>
+
+        {% block body %}{% endblock %}
+
+        {% block footer %}
+           
+            <nav class="navbar fbg d-flex flex-wrap nfbg  dispaly-flex justify-content-center">
+              
+              <div><h5 class="nftext">Copyright © 2023 Aleksandar/Arnaldo/Viktor All rights reserved.</h5></div>
+              
+            </nav>
+
+          {% endblock %}
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+            <script src="https://kit.fontawesome.com/6fe836f427.js" crossorigin="anonymous"></script>
+            <script>
+               // -----BACK_BUTTON-----
+              /**
+              * Back to top button
+              */
+
+              let backtotop = document.getElementsByClassName('.back-to-top')
+               if (backtotop) {
+                 const toggleBacktotop = () => {
+                   if (window.scrollY > 100) {
+                     backtotop.classList.add('active')
+                   } else {
+                     backtotop.classList.remove('active')
+                   }
+                 }
+                 window.addEventListener('load', toggleBacktotop)
+                 onscroll(document, toggleBacktotop)
+               }
+             
+               // -----BACK_BUTTTON----- 
+            </script>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset("css/login.css") }}">
+<script src="https://kit.fontawesome.com/c8cde29953.js" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+
+<div class="container text-center d-flex flex-column" style="margin-top: 100px;"></div>
+    
+    <div class='col-lg-12 col-md-12 d-flex justify-content-center'>
+        <div class='container fluid row gap-3 text-center form text' style="margin-bottom: 100px;">
+
+            <form method="post">
+                
+
+                <h1 class=" mb-3 font-weight-normal texttitle">Sign in</h1>
+                <hr class="fs-1">
+
+                <label for="inputEmail"></label><h1 class="fs-2 "><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i> Email <i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i></h1>
+
+                <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="bg-dark text2 fs-2 w-25" autocomplete="email" required autofocus>
+
+                <br><br>    
+
+
+                <label for="inputPassword"></label><h1 class="fs-2 "><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i> Password <i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i></h1>
+                <input type="password" name="password" id="inputPassword" class="bg-dark text2 fs-2 w-25" autocomplete="current-password" required>
+                <div class="container w-75 h">
+                    {% if error %}
+                    <h1 class="alert alert-danger text-center">{{ error.messageKey|trans(error.messageData, 'security') }}</h1>
+                {% endif %}
+
+                </div>
+                
+
+                <input type="hidden" name="_csrf_token"
+                    value="{{ csrf_token('authenticate') }}"
+                >
+
+                {#
+                    Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                    See https://symfony.com/doc/current/security/remember_me.html
+
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" name="_remember_me"> Remember me
+                        </label>
+                    </div>
+                #}
+                <br> <br>   <br> 
+                <button class="btn w-25 btn-primary button glow-button fs-1" type="submit">
+                    Sign in
+                </button><br><br>
+
+                <div class="container"><a href="/register" class="btn btn-success w-25 button glow-button fs-1">Register</a></div>
+                <br>
+
+
+            </form>
+        </div>    
+    </div>        
+</div>
+
+{% endblock %}

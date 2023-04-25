@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %} {% block stylesheets %}
+<link rel="stylesheet" href="{{ asset("arnaldocss/css.css") }}"> {% endblock %} {% block title %}Pet{% endblock %} {% block body %}
+<h1 class="text-center animate__animated animate__fadeInLeft" id="details">Paw Details</h1>
+
+<div class="container">
+    <div class="row">
+        {% if pet.status == "Available" %}
+        <div class="card mb-4 animate__animated animate__zoomIn">
+
+
+            <div class="card-body">
+                <center class="m-t-30"> <img src="{{asset("uploads/" ~ pet.image)}}" class="rounded">
+                    <h4 class="card-title m-t-10">{{ pet.name }}</h4>
+                    <h6 class="card-subtitle">{{ pet.species }}</h6><br>
+                    <p class="card-text">{{ pet.description }}</p>
+                    <div class="row text-center justify-content-md-center">
+                        <div class="col-4"><i class="fa fa-cake-candles"></i>
+                            <font class="font-medium">{{ pet.age }}</font>
+                            </a>
+                        </div>
+                        <div class="col-4"><i class="fa fa-paw"></i>
+                            <font class="font-medium">{{ pet.status }}</font>
+                            </a>
+                        </div>
+                    </div>
+                </center>
+            </div>
+            <div>
+                <hr> </div>
+            <div class="card-body">
+                <small class="text-muted p-t-30 db">ID-Number</small>
+                <h6>{{ pet.id }}</h6>
+                <small class="text-muted">Adoption Requirements </small>
+                <h6>{{ pet.needs }}</h6> <small class="text-muted p-t-30 db">Breed</small>
+                <h6>{{ pet.breed }}</h6> <small class="text-muted p-t-30 db">Address</small>
+                <h6>
+                    <td>{{ pet.location }}</td>
+                </h6>
+
+                <br>
+                <div class="container text-center">
+                    <button class="noselect mt-2"><a class="nolink" href="/user">Back</a></button>
+                    <button class="adoptselect mt-2"><a class="nolink" href="{{ path('app_pet_adopt', {'id': pet.id}) }}">Adopt</a></button>
+                </div>
+            </div>
+            {% else %}
+            <div class="card mb-4 animate__animated animate__zoomIn">
+
+
+                <div class="card-body">
+                    <center class="m-t-30"> <img src="{{asset("uploads/" ~ pet.image)}}" class="rounded">
+                        <h4 class="card-title m-t-10">{{ pet.name }}</h4>
+                        <h6 class="card-subtitle">{{ pet.species }}</h6><br>
+                        <p class="card-text">{{ pet.description }}</p>
+                        <div class="row text-center justify-content-md-center">
+                            <div class="col-4"><i class="fa fa-cake-candles"></i>
+                                <font class="font-medium">{{ pet.age }}</font>
+                                </a>
+                            </div>
+                            <div class="col-4"><i class="fa fa-paw"></i>
+                                <font class="font-medium">{{ pet.status }}</font>
+                                </a>
+                            </div>
+                        </div>
+                    </center>
+                </div>
+                <div>
+                    <hr> </div>
+                <div class="card-body">
+                    <small class="text-muted p-t-30 db">ID-Number</small>
+                    <h6>{{ pet.id }}</h6>
+                    <small class="text-muted">Adoption Requirements </small>
+                    <h6>{{ pet.needs }}</h6> <small class="text-muted p-t-30 db">Breed</small>
+                    <h6>{{ pet.breed }}</h6> <small class="text-muted p-t-30 db">Address</small>
+                    <h6>
+                        <td>{{ pet.location }}</td>
+                    </h6>
+
+                    <br>
+                    <div class="container text-center">
+                        <button class="noselect mt-2"><a class="nolink" href="/user">Back</a></button>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}

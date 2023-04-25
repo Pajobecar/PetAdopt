@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset("css/dashboard.css") }}">
+
+{% endblock %}
+
+{% block title %}Edit User{% endblock %}
+ {% block navbar %}
+           <nav class="navbar navbar-expand-lg bg-dark"  data-bs-theme="dark">
+  <div class="container-fluid"><div>
+    <a class="navbar-brand" href="/dashboard">Home</a>
+    <a href="/admin/user" class="navbar-brand">Manage Users</a></div>
+    <div>
+        <a class="navbar-brand" href="/home">User Home</a>
+
+    <a class="navbar-brand " href="#">Hello, <span class="text-primary">{{app.user.fname}}</span></a>
+    <img class="rounded" src="{{asset('uploads/' ~ app.user.image)}}" style="width:7vh;height:7vh;" alt="">
+    <a href="/logout" class="navbar-brand">Log out</a>
+    </div>
+  </div>
+ 
+</nav>
+
+          {% endblock %}
+{% block body %}
+<div class="container">
+    <h1 class="text-center  animate__fadeInLeft animate__animated">Edit User</h1>
+    <p class="fs-3" id="para">Roles(ROLE_ADMIN = ADMIN, ROLE_USER = USER):</p>
+
+   {{ include('user/_form.html.twig', {'button_label': 'Update'}) }}
+
+   <button class="noselect1 mt-2 "> <a class="updel" href="{{ path('app_user_index') }}">Back</a></button>
+    
+		
+						
+  
+    </div>
+    {% endblock %}
+{% block footer %}
+{% endblock %}

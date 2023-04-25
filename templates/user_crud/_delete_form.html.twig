@@ -1,0 +1,9 @@
+{% block stylesheets %}
+{# <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> #}
+<link rel="stylesheet" href="{{ asset("css/user_crud_edit.css") }}">
+{% endblock %}
+
+<form method="post" action="{{ path('app_user_c_r_u_d_delete', {'id': user.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ user.id) }}">
+    <button class="updel mt-2 delete">Delete</button>
+</form>

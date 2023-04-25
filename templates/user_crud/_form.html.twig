@@ -1,0 +1,10 @@
+{% block stylesheets %}
+{# <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> #}
+<link rel="stylesheet" href="{{ asset("css/user_crud_edit.css") }}">
+{% endblock %}
+<div class="container combi-form">
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button class="updel yesselect">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}
+</div>

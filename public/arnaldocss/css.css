@@ -1,0 +1,310 @@
+* {
+    font-family: 'Staatliches', cursive;
+}
+
+
+/* User index page */
+
+body {
+    background: #395B64;
+    /* margin-top: 20px; */
+}
+
+html body .m-t-30 {
+    margin-top: 30px;
+}
+
+html body .m-t-10 {
+    margin-top: 10px;
+}
+
+html body .font-medium {
+    font-weight: 500;
+}
+
+.img-circle {
+    border-radius: 100%;
+    height: 15vh;
+}
+
+h4 {
+    line-height: 22px;
+    font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #455a64;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+.card {
+    background-color: #A5C9CA;
+}
+
+.card .card-subtitle {
+    font-weight: 300;
+    margin-bottom: 15px;
+    color: #99abb4;
+}
+
+a.link {
+    color: #455a64;
+}
+
+.btn-secondary,
+.btn-secondary.disabled {
+    -webkit-box-shadow: 0 2px 2px 0 rgba(169, 169, 169, 0.14), 0 3px 1px -2px rgba(169, 169, 169, 0.2), 0 1px 5px 0 rgba(169, 169, 169, 0.12);
+    box-shadow: 0 2px 2px 0 rgba(169, 169, 169, 0.14), 0 3px 1px -2px rgba(169, 169, 169, 0.2), 0 1px 5px 0 rgba(169, 169, 169, 0.12);
+    -webkit-transition: 0.2s ease-in;
+    -o-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    background-color: #ffffff;
+    color: #67757c;
+    border-color: #b1b8bb;
+}
+
+.btn {
+    padding: 7px 12px;
+    cursor: pointer;
+}
+
+#petshop {
+    text-shadow: 2px 2px white;
+    font-size: 5em;
+    color: black;
+}
+
+
+/* Details and Back Button on the card (user index and details page)*/
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.noselect {
+    width: 110px;
+    height: 35px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 5px;
+    background: yellow;
+    border: 2px solid black;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4);
+    transition: 500ms;
+}
+
+.noselect:after {
+    content: '';
+    position: absolute;
+    transform: translateX(-55px) translateY(-40px);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 0px 0px 50px transparent;
+    transition: 500ms;
+}
+
+.noselect:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.noselect:hover:after {
+    background: white;
+    box-shadow: 0px 0px 20px yellow, 0px 0px 30px yellow, inset 0px 0px 10px yellow;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    25% {
+        transform: translateX(-25px) translateY(-35px);
+        width: 15px;
+        height: 15px;
+    }
+    50% {
+        transform: translateX(-55px) translateY(-30px);
+        width: 5px;
+        height: 5px;
+    }
+    75% {
+        transform: translateX(-85px) translateY(-35px);
+        width: 15px;
+        height: 15px;
+    }
+}
+
+.noselect:focus {
+    outline: none;
+}
+
+.nolink {
+    text-decoration: none;
+    color: black;
+}
+/* Like Button on the card */
+.likeselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.likeselect {
+    width: 135px;
+    height: 35px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 5px;
+    background: #0275d8;
+    border: 2px solid black;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4);
+    transition: 500ms;
+}
+
+.likeselect:after {
+    content: '';
+    position: absolute;
+    transform: translateX(-55px) translateY(-40px);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 0px 0px 50px transparent;
+    transition: 500ms;
+}
+
+.likeselect:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.likeselect:hover:after {
+    background: white;
+    box-shadow: 0px 0px 20px #0275d8, 0px 0px 30px #0275d8, inset 0px 0px 10px #0275d8;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    25% {
+        transform: translateX(-25px) translateY(-35px);
+        width: 15px;
+        height: 15px;
+    }
+    50% {
+        transform: translateX(-55px) translateY(-30px);
+        width: 5px;
+        height: 5px;
+    }
+    75% {
+        transform: translateX(-85px) translateY(-35px);
+        width: 15px;
+        height: 15px;
+    }
+}
+
+.likeselect:focus {
+    outline: none;
+}
+
+.nolink {
+    text-decoration: none;
+    color: black;
+}
+/* Adopt Button on the card (details page)*/
+
+.adoptselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.adoptselect {
+    width: 110px;
+    height: 35px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 5px;
+    background: green;
+    border: 2px solid black;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4);
+    transition: 500ms;
+    text-decoration: none;
+    color: black;
+}
+
+.adoptselect:after {
+    content: '';
+    position: absolute;
+    transform: translateX(-55px) translateY(-40px);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 0px 0px 50px transparent;
+    transition: 500ms;
+}
+
+.adoptselect:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.adoptselect:hover:after {
+    background: white;
+    box-shadow: 0px 0px 20px green, 0px 0px 30px green, inset 0px 0px 10px green;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    25% {
+        transform: translateX(-25px) translateY(-35px);
+        width: 15px;
+        height: 15px;
+    }
+    50% {
+        transform: translateX(-55px) translateY(-30px);
+        width: 5px;
+        height: 5px;
+    }
+    75% {
+        transform: translateX(-85px) translateY(-35px);
+        width: 15px;
+        height: 15px;
+    }
+}
+
+.adoptselect:focus {
+    outline: none;
+}
+
+
+/* details page */
+
+#details {
+    text-shadow: 2px 2px white;
+    font-size: 5em;
+    color: black;
+}

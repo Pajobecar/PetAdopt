@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit User{% endblock %}
+{% block stylesheets %}
+{# <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> #}
+<link rel="stylesheet" href="{{ asset("css/user_crud_edit.css") }}">
+{% endblock %}
+
+{% block body %}
+<body>
+    
+    <div class="container mx-auto">
+    <h1>Edit User <img src="{{asset("uploads/" ~ user.image)}}" class="rounded-circle mt-2" width="80px" height="80px" alt=""></h1>
+        {{ include('user_crud/_form.html.twig', {'button_label': 'Update'}) }}
+    
+        <button class="noselect mt-2 mb-4"> <a class="updel" style="text-decoration: none; color:black;" href="{{ path('app_user_c_r_u_d_index') }}">Back</a></button>
+
+        {# {{ include('user_crud/_delete_form.html.twig') }} #}
+    </div>
+</body>
+{% endblock %}

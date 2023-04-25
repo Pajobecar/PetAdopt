@@ -1,0 +1,75 @@
+.nftext {
+    color: #E7F6F2;
+    font-family: 'Staatliches', cursive;
+    
+}
+.nftext:hover {
+    color: #A5C9CA;
+}
+.nftexttitle {
+    text-shadow: 2px 2px black;
+    font-size: 3em;
+}
+
+.nfbg{
+    background: #2c3333;
+    height: 10vh;
+    z-index: 5;
+}
+.fbg{
+    background-color: black ;
+    height: 15vh;
+    border-top: 1px solid white !important;
+}
+.navzoom {
+    color: #E7F6F2;
+    transition: color 4s ease-out;
+}
+
+.navzoom:hover {
+    transform: scale(0.8);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    color: #A5C9CA;
+}
+
+.navbutton {
+    color: rgba(255, 255, 255, 0.8);
+    background: green(145, 92, 182);
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+.glow-navbutton:hover {
+    color: black;
+    box-shadow: 0 15px 50px red;
+}
+.navlogotext{
+    color: #FFD700;
+    text-shadow: 2px 2px black;
+    font-size: 2.2em !important;
+}
+.navlogotext:hover{
+    color: #7B68EE;
+    
+}
+.navnametext{
+    color:#7B68EE;
+    font-family: 'Staatliches', cursive;
+}
+.navnametext:hover{
+    color:#FFD700;;
+}
+
+.back-to-top{
+    right: 20px;
+    position: fixed;
+    bottom: 110px;
+    z-index: 996;
+  }
+
+.navbar{
+    position: sticky;
+    top: 0px;
+    border: none;
+}
+

@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pet index{% endblock %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset("css/dashboard.css") }}">
+
+{% endblock %}
+
+    {% block navbar %}
+           <nav class="navbar navbar-expand-lg bg-dark"  data-bs-theme="dark">
+  <div class="container-fluid"><div>
+    <a class="navbar-brand" href="/dashboard">Home</a>
+    <a href="/admin/user" class="navbar-brand">Manage Users</a></div>
+    <div>
+    <a class="navbar-brand" href="/home">User Home</a>
+    <a class="navbar-brand " href="#">Hello, <span class="text-primary">{{app.user.fname}}</span></a>
+    <img class="rounded" src="{{asset('uploads/' ~ app.user.image)}}" style="width:7vh;height:7vh;" alt="">
+    <a href="/logout" class="navbar-brand">Log out</a>
+    </div>
+  </div>
+ 
+</nav>
+
+          {% endblock %}
+          {% block body %}
+          
+<div class="container">
+    <h1 class="text-center mt-5 mb-5 animate__fadeInLeft animate__animated">Dashboard</h1>
+<button id="noselect1" class="noselect1  mt-2 mb-2" ><a class="updel" href="{{ path('app_pet_new')}}">Insert new animal</a></button>
+
+  <div class="container mb-5 ">
+    <div class="row text-center justify-content-center gap-3">
+ 
+        {% for pet in pets %}
+        
+     
+            
+      
+            
+         
+                <div class="card  col-lg-3 col-md-4 col-sm-12 pt-1 animate__zoomIn animate__animated">
+                    <div class="card-body  ">
+                        <center class="m-t-30"> <img src="{{asset("uploads/" ~ pet.image)}}" style="border-radius:60%" width="150">
+                            <h4 class="card-title m-t-10">{{ pet.name }}</h4>
+                            <h6 class="card-subtitle">{{ pet.species }}</h6><br>
+                            <p class="card-text">{{ pet.description }}</p>
+                            <div class="row text-center justify-content-md-center">
+                                <div class="col-4"><i class="fa fa-user"></i>
+                                    <font class="font-medium">Age: {{ pet.age }}</font>
+                                    </a>
+                                </div>
+                                <div class="col-4"><i class="fa fa-image"></i>
+                                    <font class="font-medium">{{ pet.status }}</font>
+                                    </a>
+                                </div>
+                            </div>
+                        </center>
+                    </div>
+                    <div>
+                        <hr> </div>
+                    <div class="card-body"> <small class="text-muted">Adoption Requirements </small>
+                        <h6>{{ pet.needs }}</h6> <small class="text-muted p-t-30 db">Breed</small>
+                        <h6>{{ pet.breed }}</h6> <small class="text-muted p-t-30 db">Address</small>
+                        <h6>
+                            <td>{{ pet.location }}</td>
+                        </h6>
+                        <div class="map-box">
+                            {# <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d470029.1604841957!2d72.29955005258641!3d23.019996818380896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C+Gujarat!5e0!3m2!1sen!2sin!4v1493204785508"
+                                width="100%" height="150" frameborder="0" style="border:0" allowfullscreen=""></iframe> #}
+                        </div> 
+                        <br>
+                        <button class="noselect mt-2" ><a class="updel" href="delete/{{pet.id}}">Delete</a></button>
+                        <button  class="yesselect mt-2"><a class="updel" href="{{pet.id}}/edit">Edit</a></button>
+                          
+                    </div>
+                </div>
+      
+      
+    
+
+{# <a href="{{ path('app_pet_show', {'id': pet.id}) }}">show</a>
+<a href="{{ path('app_pet_edit', {'id': pet.id}) }}">edit</a> #} 
+        {% else %}
+            <h3 class="text-center"></h3>
+        {% endfor %}
+        </div>
+</div>
+
+
+    
+    </div>
+    
+{% endblock %}
+{% block footer %}
+{% endblock %}

@@ -1,0 +1,213 @@
+body {
+    background-color: #395B64;
+}
+.profilecard{
+    background-color: #A5C9CA;
+    opacity: 0.4;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.profilecard:hover{
+    opacity: 1;
+}
+.profiletext{
+    color:#7B68EE;
+    font-family: 'Staatliches', cursive;
+}
+.profiletext2{
+    color:black;
+    font-family: 'Staatliches', cursive;
+}
+.profiletexttitle {
+    color: black; 
+    text-shadow: 2px 2px white;
+    font-size: 5em;
+}
+.male{
+    color: #00008B;
+}
+.female{
+    color: #DA70D6;
+}
+
+/* detail button */ 
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.noselect {
+    width: 110px;
+    height: 35px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 5px;
+    background: #00008B;
+    border: 2px solid black;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4);
+    transition: 500ms;
+}
+
+.noselect:after {
+    content: '';
+    position: absolute;
+    transform: translateX(-55px) translateY(-40px);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 0px 0px 50px transparent;
+    transition: 500ms;
+}
+
+.noselect:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.noselect:hover:after {
+    background: white;
+    box-shadow: 0px 0px 20px #00008B, 0px 0px 30px #00008B, inset 0px 0px 10px #00008B;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    25% {
+        transform: translateX(-25px) translateY(-35px);
+        width: 15px;
+        height: 15px;
+    }
+    50% {
+        transform: translateX(-55px) translateY(-30px);
+        width: 5px;
+        height: 5px;
+    }
+    75% {
+        transform: translateX(-85px) translateY(-35px);
+        width: 15px;
+        height: 15px;
+    }
+}
+
+.noselect:focus {
+    outline: none;
+}
+
+.nolink {
+    text-decoration: none;
+    color: black;
+}
+
+/* end detal button */
+
+/* delete button */
+.noselect2 {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.noselect2 {
+    width: 110px;
+    height: 35px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 5px;
+    background: red;
+    border: 2px solid black;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4);
+    transition: 500ms;
+}
+
+.noselect2:after {
+    content: '';
+    position: absolute;
+    transform: translateX(-55px) translateY(-40px);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 0px 0px 50px transparent;
+    transition: 500ms;
+}
+
+.noselect2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.noselect2:hover:after {
+    background: white;
+    box-shadow: 0px 0px 20px red, 0px 0px 30px red, inset 0px 0px 10px red;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    25% {
+        transform: translateX(-25px) translateY(-35px);
+        width: 15px;
+        height: 15px;
+    }
+    50% {
+        transform: translateX(-55px) translateY(-30px);
+        width: 5px;
+        height: 5px;
+    }
+    75% {
+        transform: translateX(-85px) translateY(-35px);
+        width: 15px;
+        height: 15px;
+    }
+}
+
+.noselect2:focus {
+    outline: none;
+}
+
+.nolink2 {
+    text-decoration: none;
+    color: black;
+}
+/* end delete button */
+.card-body {
+    background-color: #A5C9CA !important;
+    border: none !important;
+}
+
+
+
+.glow {
+    color: rgba(255, 255, 255, 0.8);
+    background: green(145, 92, 182);
+    
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+.glow-glow:hover{
+    color: #A5C9CA;
+    box-shadow: 0 25px 25px white;
+}
+ /* paw */
+ .zoom{
+    color:#A5C9CA;
+    transition: color 4s ease-out;
+
+}
+.zoom:hover {
+    
+    transform: scale(0.9); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    color: black;
+}
+ /* paw */

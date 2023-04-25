@@ -1,0 +1,129 @@
+body {
+    background-color: #395B64;
+}
+.abouttext {
+    color: #000000;
+    font-family: 'Staatliches', cursive;
+}
+
+.abouttexttitle {
+    text-shadow: 2px 2px white;
+    font-size: 5em;
+}
+.aboutcard{
+    background-color: #A5C9CA;
+    opacity: 0.4;
+}
+.aboutcard:hover{
+    opacity: 1;
+}
+
+
+
+
+/* button contact witch was removed later */
+.contactb {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.contactb {
+    width: 110px;
+    height: 35px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 5px;
+    background: grey;
+    border: 2px solid black;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4);
+    transition: 500ms;
+}
+
+.contactb:after {
+    content: '';
+    position: absolute;
+    transform: translateX(-55px) translateY(-40px);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 0px 0px 50px transparent;
+    transition: 500ms;
+}
+
+.contactb:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.contactb:hover:after {
+    background: white;
+    box-shadow: 0px 0px 20px grey, 0px 0px 30px grey, inset 0px 0px 10px grey;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    25% {
+        transform: translateX(-25px) translateY(-35px);
+        width: 15px;
+        height: 15px;
+    }
+    50% {
+        transform: translateX(-55px) translateY(-30px);
+        width: 5px;
+        height: 5px;
+    }
+    75% {
+        transform: translateX(-85px) translateY(-35px);
+        width: 15px;
+        height: 15px;
+    }
+}
+
+.contactb:focus {
+    outline: none;
+}
+
+.contactbu {
+    text-decoration: none;
+    color: black;
+}
+
+/* paw */
+.zoom12 {
+    color:#A5C9CA;
+    transition: color 4s ease-out;
+
+}
+.zoom12:hover {
+    
+    transform: scale(0.9); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    color: black;
+}
+
+ /* paw */
+
+ .glow1 {
+    color: rgba(255, 255, 255, 0.8);
+    background: green(145, 92, 182);
+    
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+.glow1-glow:hover{
+    color: #A5C9CA;
+    box-shadow: 0 25px 25px white;
+    
+}
+
+.glow1-glow:hover > .zoom12 {
+    transform: scale(0.9); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    color: black;
+}

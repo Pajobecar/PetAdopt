@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset("css/register.css") }}">
+<script src="https://kit.fontawesome.com/c8cde29953.js" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block body %}
+<div class="container text-center d-flex flex-column" style="margin-top: 100px; "></div>
+    
+    <div class='col-lg-12 col-md-12 d-flex justify-content-center'>
+        <div class='container fluid row gap-3 text-center form d-flex justify-content-center' style="margin-bottom: 100px;">
+            
+            <h1 class="mb-3 font-weight-normal texttitle text">Register</h1>
+            
+            <hr>
+
+            {{ form_start(registrationForm) }}
+            <div class="container text">
+                <h1 class="fs-2"><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i> First Name <i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i></h1>
+                {{ form_row(registrationForm.fname, {label: ' '}) }}
+                <h1 class="fs-2"><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i> Last Name <i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i></h1>
+                {{ form_row(registrationForm.lname, {label: ' '}) }}
+                <h1 class="fs-2"><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i> Email <i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i></h1>
+                {{ form_row(registrationForm.email, {label: ' '}) }}
+                <h1 class="fs-2"><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i> Gender <i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i></h1>
+                {{ form_row(registrationForm.gender, {label: ' '}) }}
+                <h1 class="fs-2"><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i> City <i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i></h1>
+                {{ form_row(registrationForm.city, {label: ' '}) }}
+            </div><br>
+                 
+
+                <div class="container w-25">
+                    <h1 class="fs-2 text"><i class="fa-solid fa-paw zoom"></i> Birth Date <i class="fa-solid fa-paw zoom"></i></h1>
+                    {{ form_row(registrationForm.bdate, {label: ' '}) }}
+                </div>
+                <br>
+
+                <h1 class="fs-2 text"><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i> Choose a Profile Picture <i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i></h1>
+                <div class="container">{{ form_row(registrationForm.image, {label: ' '}) }}</div>
+                
+                <br>
+
+
+
+
+
+                <h1 class="fs-2 text"><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i> Password <i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i></h1>
+                {{ form_row(registrationForm.plainPassword, {label: ' '}) }}
+
+                <br>
+                <div class="container border border-dark text fs-2"><span >Welcome to our website. By accessing and using this website, you agree to be bound by the following terms and conditions. If you do not agree with these terms and conditions, please do not use this website. We reserve the right to modify these terms and conditions at any time without prior notice.</span>
+                </div><br>
+                <h1 class="fs-2 text"><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i> Agree to Terms and Conditions <i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i><i class="fa-solid fa-paw zoom"></i></h1>
+                <div class="container w-25">{{ form_row(registrationForm.agreeTerms, {label: ' '}) }}</div>
+                
+
+                <br>
+                <button type="submit" class="btn w-25 btn-success button glow-button fs-1 text">Create Account</button>
+                {{ form_end(registrationForm) }}
+                <br>
+        </div>
+    </div>         
+</div>                
+{% endblock %}

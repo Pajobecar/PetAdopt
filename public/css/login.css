@@ -1,0 +1,53 @@
+.text {
+    color: #2C3333;
+    font-family: 'Staatliches', cursive;
+}
+
+.texttitle {
+    text-shadow: 2px 2px white;
+    font-size: 5em;
+}
+
+.text2 {
+    color: #E7F6F2;
+}
+
+body {
+    background-color: #395B64;
+}
+
+.form {
+    background-color: #A5C9CA;
+    opacity: 0.4;
+}
+
+.form:hover {
+    opacity: 0.6;
+}
+
+.button {
+    color: rgba(255, 255, 255, 0.8);
+    background: green(145, 92, 182);
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+.glow-button:hover {
+    color: black;
+    box-shadow: 0 25px 50px red;
+}
+
+.zoom {
+    color: #A5C9CA !important;
+    transition: color 4s ease-out;
+}
+
+.zoom:hover {
+    transform: scale(0.9);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    color: black !important;
+}
+
+* {
+    font-family: 'Staatliches', cursive;
+}
